@@ -6,13 +6,13 @@ class Owner
   attr_accessor :pets
   attr_reader :name, :species
   
-  @@pets = {:dogs => [], :cats => []}
+  
 
   def initialize(name)
     OWNERS << self
     @species = "human"
     @name = name
-    #@pets = {:dogs => [], :cats => []}
+    @pets = [{:dogs => [], :cats => []}]
   end
   
   def say_species
@@ -69,7 +69,7 @@ class Owner
         animal.mood = "nervous"
         animal.owner = nil
       end
-      animals.clear
+      animal.clear
     end
   
 
