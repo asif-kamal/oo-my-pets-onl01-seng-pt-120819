@@ -63,7 +63,7 @@ class Owner
 
 
  def sell_pets
-   binding.pry
+   #binding.pry
    all_pets = self.dogs + self.cats
     all_pets.map do |animal|
         animal.mood = "nervous"
