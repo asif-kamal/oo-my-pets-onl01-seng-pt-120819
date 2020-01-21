@@ -65,8 +65,7 @@ class Owner
  def sell_pets
    binding.pry
    all_pets = self.dogs + self.cats
-    pets.each do |species, animals|
-      animals.map do |animal|
+    all_pets.map do |animal|
         animal.mood = "nervous"
         animal.owner = nil
       end
