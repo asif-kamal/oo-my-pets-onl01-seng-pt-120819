@@ -65,6 +65,7 @@ class Owner
     pets.each do |species, animals|
       animals.map do |animal|
         animal.mood = "nervous"
+        animal.owner = nil
       end
       animals.clear
     end
