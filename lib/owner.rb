@@ -6,12 +6,13 @@ class Owner
   attr_accessor :pets
   attr_reader :name, :species
   
+  @@pets = {:dogs => [], :cats => []}
 
   def initialize(name)
     OWNERS << self
     @species = "human"
     @name = name
-    @pets = {:dogs => [], :cats => []}
+    #@pets = {:dogs => [], :cats => []}
   end
   
   def say_species
@@ -63,6 +64,7 @@ class Owner
 
  def sell_pets
    binding.pry
+   all_pets = 
     pets.each do |species, animals|
       animals.map do |animal|
         animal.mood = "nervous"
