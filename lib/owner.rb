@@ -3,7 +3,7 @@ class Owner
   
   OWNERS = []
   
-  
+  attr_accessor :pets
   attr_reader :name, :species
   
   
@@ -12,6 +12,7 @@ class Owner
     OWNERS << self
     @species = "human"
     @name = name
+    @pets = []
   end
   
   def say_species
