@@ -50,14 +50,14 @@ class Owner
   end
 
   def walk_dogs
-    self.dogs.each{|dog| 
+    self.dogs.map{|dog| 
     dog.mood = "happy"}
     
   end
 
   def feed_cats
-    pets[:cats].map do |cat|
-      cat.mood = "happy"
+    self.cats.map {|cat|
+      cat.mood = "happy"}
     end
   end
 
@@ -73,7 +73,7 @@ class Owner
   
 
   def list_pets
-    "I have #{pets[:dogs].count} dog(s), and #{pets[:cats].count} cat(s)."
+    "I have #{self.dogs.count} dog(s), and #{self.cats.count} cat(s)."
   end
 
 
