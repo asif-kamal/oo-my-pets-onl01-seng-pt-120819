@@ -50,7 +50,7 @@ class Owner
   end
 
   def walk_dogs
-    pets[:dogs].each{|dog| 
+    self.dogs.each{|dog| 
     dog.mood = "happy"}
     
   end
@@ -64,12 +64,11 @@ class Owner
 
  def sell_pets
    #binding.pry
-   all_pets = self.dogs + self.cats
+    all_pets = self.dogs + self.cats
     all_pets.map do |animal|
         animal.mood = "nervous"
         animal.owner = nil
       end
-      #animal.clear
     end
   
 
